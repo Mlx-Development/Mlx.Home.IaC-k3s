@@ -12,10 +12,10 @@ terraform {
 
   # Remove this if not using azure backend
   backend "azurerm" {
-    resource_group_name  = "<<RESOURCE-GROUP-NAME>>"
-    storage_account_name = "<<STORAGE-ACCOUNT-NAME>>"
-    container_name       = "<<CONTAINER-NAME>>"
-    key                  = "<<SOME-IDENTIFIER>>.terraform.tfstate"
+    resource_group_name  = "tfstate"
+    storage_account_name = "tfstate927623158"
+    container_name       = "tfstate"
+    key                  = "dev.k3s.terraform.tfstate"
   }
 }
 

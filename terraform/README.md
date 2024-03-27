@@ -54,11 +54,11 @@ This code base doens't completly provision XCP-ng from ABSOLUTE scratch, there a
     ```
 1. Run Terraform Plan & review any changes
     ```
-    terraform plan
+    terraform plan -var-file=terraform.dev.tfvars
     ```
 1. Run Terrafrom Apply
     ```
-    terraform apply
+    terraform apply -var-file=terraform.dev.tfvars
     ```
 1. Wait for new VMs to restart
     - restarting ensures updates are configured

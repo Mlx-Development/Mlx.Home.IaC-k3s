@@ -5,10 +5,10 @@ ansible_user: ansible
 systemd_dir: /etc/systemd/system
 
 # Set your timezone
-system_timezone: "Your/Timezone"
+system_timezone: "America/Chicago"
 
 # interface which will be used for flannel
-flannel_iface: "eth0"
+flannel_iface: "enX0"
 
 # uncomment calico_iface to use tigera operator/calico cni instead of flannel https://docs.tigera.io/calico/latest/about
 # calico_iface: "eth0"
@@ -35,11 +35,11 @@ cilium_bgp_peer_address: "192.168.30.1"
 cilium_bgp_lb_cidr: "192.168.31.0/24"   # cidr for cilium loadbalancer ipam
 
 # apiserver_endpoint is virtual ip-address which will be configured on each master
-apiserver_endpoint: "10.0.0.2"
+apiserver_endpoint: "10.17.17.10"
 
 # k3s_token is required  masters can talk together securely
 # this token should be alpha numeric only
-k3s_token: "Some-Super-Secret-Alpha-Numeric-Key"
+k3s_token: "xHEgxoxTgJFLD3qfs6Dk7KKp9X3qRPUemFhHJzoxTq7VSHJsgckbMZJGR5BjKS"
 
 # The IP on which the node is reachable in the cluster.
 # Here, a sensible default is provided, you can still override
@@ -97,7 +97,7 @@ metal_lb_speaker_tag_version: "v0.14.3"
 metal_lb_controller_tag_version: "v0.14.3"
 
 # metallb ip range for load balancer
-metal_lb_ip_range: "10.0.0.100-10.0.0.254"
+metal_lb_ip_range: "10.17.17.100-10.17.17.199"
 
 # Only enable if your nodes are proxmox LXC nodes, make sure to configure your proxmox nodes
 # in your hosts.ini file.
