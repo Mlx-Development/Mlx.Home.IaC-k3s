@@ -58,7 +58,7 @@ This code base doens't completly provision XCP-ng from ABSOLUTE scratch, there a
     ```
 1. Run Terrafrom Apply
     ```
-    terraform apply -var-file=terraform.dev.tfvars
+    terraform apply -var-file=terraform.dev.tfvars -auto-approve
     ```
 1. Wait for new VMs to restart
     - restarting ensures updates are configured
