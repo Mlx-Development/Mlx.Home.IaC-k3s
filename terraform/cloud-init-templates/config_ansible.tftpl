@@ -1,0 +1,30 @@
+#cloud-config
+hostname: ${hostname}
+package_update: true
+package_upgrade: true
+users:
+  - name: ${username}
+    homedir: /home/${username}
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    groups: users, admin
+    lock_passwd: true
+    shell: /bin/bash
+    ssh_authorized_keys:
+      %{~ for ssh in ssh-keys ~}
+      - ${ssh}
+      %{~ endfor ~}
+  - name: ansible
+    homedir: /home/ansible
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    groups: users, admin
+    lock_passwd: true
+    shell: /bin/bash
+    ssh_authorized_keys:
+      - ${ansible-ssh-key}
+packages:
+  - git
+  - curl
+  - ca-certificates
+  - python3
+power_state:
+  mode: reboot

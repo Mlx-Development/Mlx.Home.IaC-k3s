@@ -1,0 +1,8 @@
+version: 2
+ethernets:
+  eno0:
+    match:
+      macaddress: '${mac}'
+    addresses: []
+    dhcp-identifier: mac
+    dhcp4: true
