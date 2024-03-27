@@ -59,7 +59,7 @@ This phase is for deploying Rancher and Longhorn to your k3s cluster.
     ```
     helm install rancher rancher-stable/rancher \
         --namespace cattle-system \
-        --set hostname=rancher.example.com
+        --set hostname=rancher-dev.mlxsolutions.com
     ```
 1. validate `rancher` rollout
     ```
@@ -73,12 +73,12 @@ This phase is for deploying Rancher and Longhorn to your k3s cluster.
     ```
     kubectl get svc --all-namespaces -o wide
     ```
-1. Update DNS to route `rancher.example.com` to the IP address
+1. Update DNS to route `rancher-dev.mlxsolutions.com` to the IP address
 1. Obtain bootstrap password
     ```
     kubectl get secret --namespace cattle-system bootstrap-secret -o go-template='{{.data.bootstrapPassword|base64decode}}{{ "\n" }}'
     ```
-1. Navigate to `rancher.example.com`, and go through initalization steps, create new admin account
+1. Navigate to `rancher-dev.mlxsolutions.com`, and go through initalization steps, create new admin account
 
 ## Install Longhorn
 1. Create new project in `Cluster > Projects/Namespaces > Create Project`

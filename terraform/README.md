@@ -44,6 +44,7 @@ This code base doens't completly provision XCP-ng from ABSOLUTE scratch, there a
         cp terraform.example.tfvars terraform.tfvars
         ```
     1. Edit the new `terraform.tfvars` file
+        > ⚠️ _**NOTE:**_ the VMs will be created with DHCP networking. It is recommended to set static DHCP allocations in your DHCP server for the MAC addresses you push through within these .tfvars files!
 ## Run Terraform
 
 >All of these commands should be ran from this directory
