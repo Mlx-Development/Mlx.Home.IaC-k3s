@@ -20,5 +20,5 @@ terraform {
 }
 
 provider "xenorchestra" {
-  insecure = false
+  insecure = true
 }
