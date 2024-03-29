@@ -66,7 +66,6 @@ extra_server_args: >-
   {% endif %}
   --tls-san {{ apiserver_endpoint }}
   --disable servicelb
-  --disable traefik
 
 extra_agent_args: >-
   {{ extra_args }}
